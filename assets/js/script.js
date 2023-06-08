@@ -9,7 +9,11 @@ const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
 const messages = document.getElementById("messages");
 const choices = ["rock", "paper", "scissors", "lizard", "spock"];
-
+const beats[0] =["lizard", "scissors"];
+const beats[1] =["rock0", "spock"];
+const beats[2] =["lizard", "paper"];
+const beats[3] =["paper", "spock"];
+const beats[4] =["scissors", "rock"];
 
 /**
  *  Add event listener to all the buttons
@@ -35,14 +39,26 @@ function playGame(playerChoice) {
     computerImage.src = `assets/images/${choices(computerChoice)}.jpg`;
     computerImage.alt = choices(computerChoice);
 
-    let result = checkWinner(choices[computerChoice], choices[playerChoice]);
+    let result = checkWinner(playerChoice, computerChoice);
 
     updateScores(result);
 }
 
 /**
- *  Checks to see who the winer is, it accepts two strings as 
+ *  Checks to see who the winer is, it accepts two numbers as input
+ *  Returns 1 if player wins, and 0 if player loses
  */
-checkWinner(){
+checkWinner(playerChoice, computerChoice) {
 
+    if beats[playerChoice][0] == choices[computerChoice] { return 1; }
+    else if beats[playerChoice][1] == choices[computerChoice] { return 1; }
+    else { return 0; }
+}
+
+/**
+ *  Anounces a winner and updates a score
+ */
+updateScores(result) {
+    if result { messages.innerHTML = "Player wins!"; playerScore++; }
+    else { messages.innerHTML = "Computer wins!"; computerScore++; }
 }
