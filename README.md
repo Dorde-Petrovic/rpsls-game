@@ -126,9 +126,7 @@ Lighthouse within the Chrome Developer Tools are used to test performance, acces
 
 
 ## Compatibility
-The website displays correctly across different browsers and screen sizes.
-
-It was checked on Chrome, Firefox, Safari and Edge.
+The website doesn't display correctly. 
 
 ## Responsiveness
 Chrome developer tool have been used to check the responsivness. 
