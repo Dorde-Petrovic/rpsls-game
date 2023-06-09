@@ -116,100 +116,39 @@ W3C Markup Validator, W3C CSS Validator Services and Jshint  were used to valida
 ![W3C Markup Validator](assets/images/W3.png)
 
 - CSS Validator
-![W3C CSS Validator](documentation/testing/w3c-css-validator.PNG)
+![W3C CSS Validator](assets/images/W3C-CSS.png)
 
 - JavaScript Validator
-![Jshint Validator JavaScript](documentation/testing/js-hint.PNG)
+![Jshint Validator JavaScript](assets/images/Javascript.png)
 
 ### Lighthouse 
-Lighthouse within the Chrome Developer Tools are used to test performance, accessibility, best practices and SEO of the My to do list Website.
-- Desktop
+Lighthouse within the Chrome Developer Tools are used to test performance, accessibility, best practices and SEO of the Website.
 
-![Lighthouse Desktop](documentation/testing/lighthouse-desktop.PNG)
-
-- Mobile
-
-![Lighthouse Mobile](documentation/testing/lighthouse-mobile.PNG)
-
-### Manual as an user: 
- 
-Features Identification (FID):  
-1. Add a task: input text + button
-2. Search tool: input
-3. Filter tool values: all, done and pending
-4. Check button
-5. Remove button
-6. Edit button and save button
-7. Scroll bar height
-
-![Features](documentation/features.png)
-
-|FID| Test Label | Test Action | Expected Outcome | Test Outcome |
-|:---|:--- |:--- |:--- |:--- |
-|1| Add a task | On input field, attempt to create a new task | Task is created either with enter or click on the plus button| PASS |
-|1| Add a empty task | On input field, attempt to create a empty task | Empty task is not created | PASS |
-|1+2| Add a task with not empty search input| Attempting to create new task with a few characters in the search input| Task is created, search tool is reset and I can see my new task| PASS |
-|1+3| Add a task with filter as "done"| Attempting to create new task with filter on done| Task is created, the filter is reset for all tasks and I can see my new task| PASS |
-|1+3| Add a task with filter as "pending"| Attempting to create new task with filter on pending| Task is created, the filter is reset for all tasks and I can see my new task| PASS |
-|1+6| Add a task without completing the edition of another task| Attempt to create a task without completing the editing of another task| New task is created and the other task can continue to be edited and saved| PASS |
-|1+4+ 5+6| Hover efect and cursor pointer | Placing the mouse cursor on the target button | Changing the color and to cursor pointer | PASS |
-|4| Check the task | On check button, attempt to check the task and the display changes to done | Task is checked as done | PASS |
-|4| Return a done task to a pending task | On check button, attempt to return a done task to pending task | Task is returned as pending| PASS |
-|3+4| Using filter as done, check a done task to return a pending | Set the filter as done and check one done task | Task is returned as pending and the filter displays only the currently checked tasks| PASS |
-|3+4| Using filter as pending, check a pending task | Set the filter as pending and check the task | Task is checked as done and the filter displays only the currently pending tasks | PASS |
-|5| Remove a pending task | On x button, attempt to remove a pending task | Pending task is removed | PASS |
-|5| Remove a done task | On x button, attempt to remove a done task | Done task is removed | PASS |
-|6| Edit a pending task | On edit button, attempt to edit a pending task and save it | Pending task is edited and saved | PASS |
-|6| Edit a done task | On edit button, attempt to edit a done task and save it | Done task is edited and saved | PASS |
-|2| Search a task | On search input, interact to search a task writing either a word or some letters | The tasks that contain the search characters will be displayed | PASS |
-|2+3| Search a task with filter as "done"| On search input, interact to search a task writing either a word or some letters and filter on done | The tasks that contain the search characters and are done will be displayed | PASS |
-|2+3| Search a task and change the filter| On search input, interact to search a task writing a letter and change the filter from all to done then to pending | The tasks that contain the search characters and the class of filter will be displayed | PASS |
-|2+3| Search a task with filter as "pending" | On search input, interact to search a task writing either a word or some letters and filter on pending | The tasks that contain the search characters and are pending will be displayed | PASS |
-|2| Clean search input | Type some letters in the search input, after displaying the search result, clear the input | After clean the search input, the tasks will be displayed according to the filter value| PASS|
-|3| Filter the done tasks | On filter tool, interact to filter all done tasks | Only the done tasks will be displayed | PASS |
-|3| Filter the pending tasks | On filter tool, interact to filter all pending tasks | Only the pending tasks will be displayed | PASS |
-|3| Return the filter to all tasks | On filter tool, interact to display all tasks | All tasks will be displayed | PASS |
-|3+2| With active filter use the search tool | Set the filter as done and interact to search tool tasks, then change the filter to pending and to all | The tasks will be displayed correctly even when changing filters and using the search tool | PASS |
-|7| Add more tasks than the height of my screen size | Add many tasks until a scrool bar appears | A scroll bar height appears and the image background has no distortion | PASS|
 
 ## Compatibility
 The website displays correctly across different browsers and screen sizes.
 
-It was checked on Chrome, Firefox, Safari and Edge. Using Safari, only the sans-serif font in the header is displayed and not the Ubuntu, but this does not affect the performance of the site.
+It was checked on Chrome, Firefox, Safari and Edge.
 
 ## Responsiveness
-Chrome developer tool have been used to check the responsivness. The application was tested on very small screens e.g. iPhone 5(320px wide) and very large screens e.g. 5k iMac Pro(5120x2880px).
+Chrome developer tool have been used to check the responsivness. 
 
 Media queries are used for more responsiveness.
 
 ## Solved bugs
-* When clicking on the icon button as content, it did not activate the event, only if I clicked on the area outside the icon. Rewrote the function of each button using e.currentTarget to fix it.
-* Function newTodo without arguments didn't work correctly.
-* Used trim() on the input to add a new task to remove any trailing/leading spaces and don't create a empty task.
-* Interactions between adding tasks with search and filter tools.
-* Interaction between check button and filter.
+I had many syntax errors to fix
 
 
 # Credits
 ## Code
-The project was inspired by a tutorial from [w3schools](https://www.w3schools.com/howto/howto_js_todolist.asp) and is not a copy. The following sources were used for this project:
-- [CS50 Harvard](https://cs50.harvard.edu/web/2020/weeks/5/)
-- [Developer Mozilla](https://developer.mozilla.org/en-US/)
-- [W3 Schools](https://www.w3schools.com/js/default.asp)
-- [Front End Masters](https://frontendmasters.com/courses/getting-started-javascript-v2/)
-- [Stack overflow](https://stackoverflow.com/questions/10086427/what-is-the-exact-difference-between-currenttarget-property-and-target-property)
-- [JavaSrcipt doc](https://devhints.io/jsdoc)
-- [Markdown Guide](https://www.markdownguide.org/extended-syntax/#tables)
-- [Conventinal Commits](https://www.conventionalcommits.org/en/v1.0.0/) 
+The project was inspired by Portfolio Project Scope Video by Matt Rudge and is not a copy. Everything that was added is my original code
 
 
 ## Acknowledgements
-* My family for their patiences as I disappeared to code during the Christmas time.
 
-* My husband for all the support and help to solve the bugs.
+* My girlfriend for all the support and help to solve the bugs.
 
-* My Mentor Brian Macharia for continuous helpful feedback.
 
 - - - 
 
-Developed By Lucimeri Andretta for Code Institute's Portfolio Project 2 - 2023
+Developed By Petrovic Dorde for Code Institute's Portfolio Project 2 - 2023
