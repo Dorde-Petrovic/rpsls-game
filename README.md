@@ -113,7 +113,7 @@ The performance was tested manual and automated testing.
 ### Validators
 W3C Markup Validator, W3C CSS Validator Services and Jshint  were used to validate this project to ensure that there were no syntax errors.
 - Markup Validator
-![W3C Markup Validator](documentation/testing/validator-w3-html.PNG)
+![W3C Markup Validator](assets/images/W3.png)
 
 - CSS Validator
 ![W3C CSS Validator](documentation/testing/w3c-css-validator.PNG)
